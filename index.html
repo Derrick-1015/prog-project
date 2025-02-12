@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Car Showroom</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: lightblue; /* Light blue background */
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: darkblue;
+            font-weight: bold;
+        }
+        /* Hero Section (Updated Width) */
+        .hero {
+            padding: 50px;
+            background-color: #00008b; /* Darker blue for contrast */
+            text-align: left; /* Align text to the left */
+            margin-left: 40px; /* Increased spacing to align with 24/7 section */
+            max-width: calc(100% + 20px); /* Increase width by 20px */
+            margin: 0 -10px; /* Compensate for increased width */
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .hero input {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+        }
+        /* Stats Section */
+        .stats {
+            display: flex;
+            align-items: center;
+            background-color: blue;
+            padding: 20px;
+            gap: 40px;
+            margin: 20px 20px;
+            justify-content: flex-start;
+            color: white;
+        }
+        .stats div {
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: darkblue;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        /* Cars Section */
+        .specialists {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .car-card {
+            background: white;
+            color: black;
+            padding: 10px;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .car-card img {
+            width: 80%;
+            height: auto;
+        }
+        .car-card:first-child { /* Align the first car card with 24/7 */
+            margin-left: 20px;
+        }
+        .car-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.7);
+        }
+        /* Why Choose Us Section (Updated Image Width) */
+        .why-choose-us {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #1e1e99;
+            color: white;
+            margin: 20px 20px;
+            gap: 20px; /* Add spacing between image and text */
+        }
+        .why-choose-us img {
+            width: 200px; /* Increased image width */
+            height: auto;
+            border-radius: 10px;
+        }
+        .reasons-list {
+            list-style: none;
+            padding: 0;
+            flex: 1; /* Allow text to take up remaining space */
+        }
+        .reasons-list li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .reasons-list li::before {
+            content: "\2713"; /* Tick mark symbol */
+            color: #ff6347; /* Tick mark color */
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        /* Newsletter Section (Updated Width) */
+        .newsletter {
+            background-color: blue; /* Blue background for the container */
+            color: white;
+            padding: 20px;
+            margin: 20px 15px; /* Reduced horizontal margins to increase width by 10px */
+            border-radius: 10px; /* Curved corners for the container */
+            max-width: calc(100% + 10px); /* Increase width by 10px */
+        }
+        .newsletter h2 {
+            margin-bottom: 10px;
+        }
+        .newsletter input {
+            width: 100%; /* Stretch the input field */
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px; /* Curved corners for the input field */
+            box-sizing: border-box; /* Ensure padding doesn't affect width */
+        }
+        /* Footer */
+        footer {
+            padding: 10px;
+            background: darkblue;
+        }
+        .map {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Luxury Cars</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button>Log In</button>
+            <button>Sign Up</button>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Find & Own Your <span class="highlight">Dream Car</span></h1>
+        <p>Luxury cars with top-notch performance and style.</p>
+        <input type="text" placeholder="Search Car Model">
+    </section>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div>24/7 Support</div>
+        <div>100+ Models</div>
+        <div>1M+ Happy Customers</div>
+    </section>
+    <!-- Cars Section -->
+    <section id="cars" class="specialists">
+        <div class="car-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA_PWoL_fqYNzuFTc1R_gEvom6vgOzxgMMpw&s" alt="Mercedes-Benz GLE">
+            <h3>Mercedes-Benz GLE</h3>
+        </div>
+        <div class="car-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKtLOamr2f7DsbwwtlXhWHFudUVUGUjBRe2uzUUdlD5zrPCtJAfCv6mEQ&s" alt="BMW Exotic">
+            <h3>BMW Exotic</h3>
+        </div>
+        <div class="car-card">
+            <img src="data:image/jpeg;base64,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" alt="Audi Sports">
+            <h3>Audi R8</h3>
+        </div>
+        <div class="car-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfwGEiuemGysDPcxIMuxV1fFW6V3xQf9hJg63VGBnl0G6eQ4MUz4tr4Vs&s" alt="Lamborghini">
+            <h3>Lamborghini Huracán</h3>
+        </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTllDs4U3dSP5QMbEgmhRnVMvU7Pnxe3jKF1Q&s" alt="Showroom Image">
+        <ul class="reasons-list">
+            <li>Wide Range of Luxury Cars</li>
+            <li>Expert Sales Team</li>
+            <li>Best Prices Guaranteed</li>
+            <li>Convenient Financing Options</li>
+            <li>Excellent Customer Service</li>
+        </ul>
+    </section>
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Subscribe To Our Newsletter</h2>
+        <input type="email" placeholder="Enter your email">
+    </section>
+    <!-- Footer -->
+    <footer>
+        <!-- Footer -->
+<footer>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: darkblue; color: white;">
+        <!-- M.A.B Section -->
+        <div style="display: flex; align-items: center;">
+            <span style="font-weight: bold; margin-right: 20px;">M.A.B</span>
+            <a href="https://facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 20px; height: 20px; margin-right: 10px;">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" style="width: 20px; height: 20px; margin-right: 10px;">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 20px; height: 20px;">
+            </a>
+        </div>
+
+        <!-- Useful Links Section -->
+        <div style="text-align: center;">
+            <p style="margin: 0; font-weight: bold;">Useful Links</p>
+            <ul style="list-style: none; padding: 0; margin: 10px 0; display: flex; justify-content: center; gap: 10px;">
+                <li><a href="#about" style="color: white; text-decoration: none;">About Us</a></li>
+                <li><a href="#privacy" style="color: white; text-decoration: none;">Privacy Policy</a></li>
+                <li><a href="#mission" style="color: white; text-decoration: none;">Our Mission</a></li>
+                <li><a href="#team" style="color: white; text-decoration: none;">Our Team</a></li>
+            </ul>
+        </div>
+
+        <!-- Address Section -->
+        <div style="text-align: right;">
+            <p style="margin: 0; font-weight: bold;">Address</p>
+            <p style="margin: 10px 0;">Nairobi, Kenya</p>
+        </div>
+    </footer>
+</body>
+</html>
